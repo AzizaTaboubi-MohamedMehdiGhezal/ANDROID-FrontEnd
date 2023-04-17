@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">savy</string>
+    <string name="login" ><br><b>Login</b> if you already have an account </br></string>
+    <string name="register" ><br><b>Register</b>  to get started with the app </br></string>
+
+    <string name="btn_register">REGISTER</string>
+    <string name="btn_login">LOGIN</string>
+    <string name="login_title">LOGIN to app</string>
+    <string name="login_sub_title">
+        <font color="#00C9B8"><b>Login</b></font>
+        if you already have an account
+    </string>
+    <string name="email">Exp: email@example.com</string>
+    <string name="next">Next</string>
+    <string name="password">password</string>
+    <string name="confirmPassword">Confirm password</string>
+    <string name="confirm">Confirm</string>
+    <string name="forgetPwd_message">Forgot your password?  Enter your email and will send you a verification code in order to restore your account.</string>
+    <string name="otp">An email has been sent. Please enter the four- digit code that you received in order to change your password.</string>
+</resources>
