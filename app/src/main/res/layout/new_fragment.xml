@@ -1,15 +1,296 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".view.new_fragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="New fragment" />
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/newTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="NEW"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.482"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:layout_width="3dp"
+            android:layout_height="350dp"
+            android:layout_marginBottom="464dp"
+            android:background="@color/grey"
+            android:rotation="-90"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageButton
+            android:id="@+id/tvImageBtn"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="50dp"
+            android:src="@drawable/tv"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/newTxt"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ImageButton
+            android:id="@+id/LaptopImageBtn"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="50dp"
+            android:src="@drawable/laptop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tvImageBtn"
+            app:layout_constraintTop_toBottomOf="@+id/newTxt"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ImageButton
+            android:id="@+id/DesktopImageBtn"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="50dp"
+            android:src="@drawable/desktop"
+            app:layout_constraintStart_toEndOf="@+id/LaptopImageBtn"
+            app:layout_constraintTop_toBottomOf="@+id/newTxt" />
+
+        <TextView
+            android:id="@+id/tvTxt"
+            android:layout_width="26dp"
+            android:layout_height="17dp"
+            android:layout_marginStart="90dp"
+            android:layout_marginTop="10dp"
+            android:text="TV"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvImageBtn" />
+
+        <TextView
+            android:id="@+id/laptopTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="63dp"
+            android:layout_marginTop="10dp"
+            android:text="Laptop"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            app:layout_constraintStart_toEndOf="@+id/tvTxt"
+            app:layout_constraintTop_toBottomOf="@+id/LaptopImageBtn" />
+
+        <TextView
+            android:id="@+id/desktopTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="53dp"
+            android:layout_marginTop="10dp"
+            android:text="Desktop"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            app:layout_constraintStart_toEndOf="@+id/laptopTxt"
+            app:layout_constraintTop_toBottomOf="@+id/DesktopImageBtn" />
+
+        <ImageButton
+            android:id="@+id/phoneImageBtn"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="11dp"
+            android:src="@drawable/phone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTxt" />
+
+        <ImageButton
+            android:id="@+id/tabletImageBtn"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="9dp"
+            android:src="@drawable/tablet"
+            app:layout_constraintStart_toEndOf="@+id/phoneImageBtn"
+            app:layout_constraintTop_toBottomOf="@+id/laptopTxt" />
+
+        <ImageButton
+            android:id="@+id/cameraImageBtn"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="9dp"
+            android:src="@drawable/camera"
+            app:layout_constraintStart_toEndOf="@+id/tabletImageBtn"
+            app:layout_constraintTop_toBottomOf="@+id/desktopTxt" />
+
+        <TextView
+            android:id="@+id/phoneTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="62dp"
+            android:layout_marginTop="10dp"
+            android:text="Smartphones"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/phoneImageBtn" />
+
+        <TextView
+            android:id="@+id/tabletTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="10dp"
+            android:text="Tablets"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            app:layout_constraintStart_toEndOf="@+id/phoneTxt"
+            app:layout_constraintTop_toBottomOf="@+id/tabletImageBtn" />
+
+        <TextView
+            android:id="@+id/cameraTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="58dp"
+            android:layout_marginTop="10dp"
+            android:text="Camera"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            app:layout_constraintStart_toEndOf="@+id/tabletTxt"
+            app:layout_constraintTop_toBottomOf="@+id/cameraImageBtn" />
+
+        <ImageButton
+            android:id="@+id/consoleImageBtn"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="6dp"
+            android:src="@drawable/console"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/phoneTxt" />
+
+        <ImageButton
+            android:id="@+id/mouseImageBtn"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/mouse"
+            app:layout_constraintStart_toEndOf="@+id/consoleImageBtn"
+            app:layout_constraintTop_toBottomOf="@+id/tabletTxt" />
+
+        <ImageButton
+            android:id="@+id/audioImageBtn"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/audio"
+            app:layout_constraintStart_toEndOf="@+id/mouseImageBtn"
+            app:layout_constraintTop_toBottomOf="@+id/cameraTxt" />
+
+        <TextView
+            android:id="@+id/consoleTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="73dp"
+            android:layout_marginTop="10dp"
+            android:text="Consoles"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/consoleImageBtn" />
+
+        <TextView
+            android:id="@+id/mouseTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="53dp"
+            android:layout_marginTop="10dp"
+            android:text="Mouse"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            app:layout_constraintStart_toEndOf="@+id/consoleTxt"
+            app:layout_constraintTop_toBottomOf="@+id/mouseImageBtn" />
+
+        <TextView
+            android:id="@+id/audioTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="67dp"
+            android:layout_marginTop="10dp"
+            android:text="Audio"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            app:layout_constraintStart_toEndOf="@+id/mouseTxt"
+            app:layout_constraintTop_toBottomOf="@+id/audioImageBtn" />
+
+        <ImageButton
+            android:id="@+id/keyboardImageBtn"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/keyborad"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/consoleTxt" />
+
+        <ImageButton
+            android:id="@+id/smartwatchImageBtn"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/smartwatch"
+            app:layout_constraintStart_toEndOf="@+id/keyboardImageBtn"
+            app:layout_constraintTop_toBottomOf="@+id/mouseTxt" />
+
+        <ImageButton
+            android:id="@+id/otherImageBtn"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/other"
+            app:layout_constraintStart_toEndOf="@+id/smartwatchImageBtn"
+            app:layout_constraintTop_toBottomOf="@+id/audioTxt" />
+
+        <TextView
+            android:id="@+id/keyboardTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="71dp"
+            android:layout_marginTop="10dp"
+            android:text="Keyboards"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/keyboardImageBtn" />
+
+        <TextView
+            android:id="@+id/smartwatchTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp"
+            android:text="SmartWatch"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            app:layout_constraintStart_toEndOf="@+id/keyboardTxt"
+            app:layout_constraintTop_toBottomOf="@+id/smartwatchImageBtn" />
+
+        <TextView
+            android:id="@+id/otherTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="10dp"
+            android:text="Other"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            app:layout_constraintStart_toEndOf="@+id/smartwatchTxt"
+            app:layout_constraintTop_toBottomOf="@+id/otherImageBtn" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 </FrameLayout>

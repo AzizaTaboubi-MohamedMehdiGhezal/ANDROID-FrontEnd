@@ -8,6 +8,6 @@ data class User (
     val profilepic: String,
     val email: String,
     val password: String,
-    val numTel: Int,
+    val numTel: String,
     val token: String
 ): Serializable

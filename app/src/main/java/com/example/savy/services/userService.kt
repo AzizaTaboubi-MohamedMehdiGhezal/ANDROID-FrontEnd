@@ -1,10 +1,7 @@
 package com.example.savy.services
 
-import com.example.savy.model.LoginRequest
-import com.example.savy.model.LoginResponse
 import com.example.savy.model.User
 import com.google.gson.annotations.SerializedName
-import org.json.JSONObject
 import retrofit2.Call
 import retrofit2.http.Body
 import retrofit2.http.POST
@@ -19,7 +16,7 @@ interface userService {
         val fullname: String,
         val email: String,
         val password: String,
-        val numTel: Int
+        val numTel: String
     )
     data class LoginBody(
         val email: String,

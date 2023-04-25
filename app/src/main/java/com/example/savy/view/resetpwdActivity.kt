@@ -23,10 +23,10 @@ import retrofit2.Response
 
 class resetpwdActivity : AppCompatActivity(){
 
-    private lateinit var changePwd_et: TextInputEditText
-    private lateinit var changePwd_lyt: TextInputLayout
-    private lateinit var ConfirmChangePwd_et: TextInputEditText
-    private lateinit var ConfirmChangePwd_lyt: TextInputLayout
+    private lateinit var pwdEdit: TextInputEditText
+    private lateinit var pwdLyt: TextInputLayout
+    private lateinit var pwdcEdit: TextInputEditText
+    private lateinit var pwdcLyt: TextInputLayout
     private lateinit var nextbtn: Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,16 +37,16 @@ class resetpwdActivity : AppCompatActivity(){
         setFullScreen(context)
         val email = intent.getStringExtra("email")
         //INIT components
-        changePwd_et = findViewById(R.id.et_cPwd)
-        changePwd_lyt = findViewById(R.id.lyt_cPwd)
-        ConfirmChangePwd_et = findViewById(R.id.et_CcPwd)
-        ConfirmChangePwd_lyt = findViewById(R.id.lyt_CcPwd)
+        pwdEdit = findViewById(R.id.pwdEdit)
+        pwdLyt = findViewById(R.id.pwdLyt)
+        pwdcEdit = findViewById(R.id.pwdcEdit)
+        pwdcLyt = findViewById(R.id.pwdcLyt)
         nextbtn = findViewById(R.id.btnNext)
         nextbtn.setOnClickListener{
-            if(comparePasswords(changePwd_et.text.toString(), ConfirmChangePwd_et.text.toString())){
+            if(comparePasswords(pwdEdit.text.toString(), pwdcEdit.text.toString())){
                 APIService.userService.changePwd(userService.changePwdBody(
-                    email.toString(),changePwd_et.text.toString(),
-                    ConfirmChangePwd_et.text.toString())).enqueue( object :
+                    email.toString(),pwdEdit.text.toString(),
+                    pwdcEdit.text.toString())).enqueue( object :
                     Callback<userService.UserResponse> {
                     override fun onResponse(
                         call: Call<userService.UserResponse>,
