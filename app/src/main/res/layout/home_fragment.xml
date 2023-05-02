@@ -8,12 +8,15 @@
     tools:context=".view.home_fragment">
 
     <ScrollView
+        android:layout_marginTop="60dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            app:layout_constraintEnd_toEndOf="@+id/whatsnewTxt"
+            app:layout_constraintStart_toEndOf="@+id/whatsnewTxt">
 
 
             <ImageSwitcher
@@ -59,16 +62,18 @@
             <TextView
                 android:id="@+id/promotionsTxt"
                 android:layout_width="198dp"
-                android:layout_height="45dp"
+                android:layout_height="0dp"
+                android:layout_marginBottom="2593dp"
                 android:text="@string/promotions"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body2"
                 android:textColor="@color/green_main"
                 android:textSize="34sp"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.075"
                 app:layout_constraintStart_toStartOf="parent"
-                tools:ignore="MissingConstraints"
-                tools:layout_editor_absoluteY="395dp">
+                app:layout_constraintTop_toBottomOf="@+id/materialDivider3"
+                tools:ignore="MissingConstraints">
 
             </TextView>
 
@@ -85,15 +90,16 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <View
-                android:layout_width="3dp"
-                android:layout_height="210dp"
-                android:layout_marginBottom="2824dp"
-                android:background="@color/grey"
-                android:rotation="-90"
-                app:layout_constraintBottom_toBottomOf="parent"
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/materialDivider3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="117dp"
+                android:layout_marginBottom="277dp"
+                app:layout_constraintBottom_toTopOf="@+id/promotionsTxt"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/announcementsTxt"

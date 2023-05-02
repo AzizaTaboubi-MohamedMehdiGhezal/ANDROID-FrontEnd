@@ -29,15 +29,14 @@ interface userService {
         val otp: String
     )
     data class changePwdBody(
-        val newPassword: String,
-        val newPasswordConfirm: String
+        val newPass: String,
+        val email: String
     )
     data class updateProfileBody(
-        val driverLicense: String,
-        val name: String,
-        val lastName: String,
-        val token: String
-    )
+        val email: String,
+        val fullname: String,
+        val numTel: String
+        )
     @POST("/user/register")
     fun signUp(@Body userBody: UserBody): Call<UserResponse>
 
@@ -53,9 +52,9 @@ interface userService {
     @POST("/user/confirmationOtp")
     fun confirmOtp(@Body otp: otp): Call<UserResponse>
 
-    @PUT("/user/resetPassword")
+    @POST("/user/resetPassword")
     fun changePwd(@Body changePwdBody: changePwdBody): Call<UserResponse>
 
-    @PUT("/user/updateUser")
+    @POST("/user/updateProfile")
     fun updateProfile(@Body updateProfileBody: updateProfileBody) : Call<UserResponse>
 }

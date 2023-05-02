@@ -54,7 +54,7 @@ class signupActivity : AppCompatActivity(){
 
 
         btnSignup!!.setOnClickListener {
-            APIService.userService.signUp(
+            APIService.UserService.signUp(
                 userService.UserBody(
                     txtName.text.toString(),
                     txtMailAddress.text.toString(),
@@ -70,7 +70,7 @@ class signupActivity : AppCompatActivity(){
                         response: Response<userService.UserResponse>
                     ) {
                         if (response.code() == 201) {
-                            APIService.userService.sendVerification(
+                            APIService.UserService.sendVerification(
                                 userService.emailBody(txtMailAddress.text.toString())
                             ).enqueue(
                                 object : Callback<userService.UserResponse> {

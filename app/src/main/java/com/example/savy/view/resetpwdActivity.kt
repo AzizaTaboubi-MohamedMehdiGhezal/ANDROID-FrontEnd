@@ -36,6 +36,7 @@ class resetpwdActivity : AppCompatActivity(){
         supportActionBar?.hide()
         setFullScreen(context)
         val email = intent.getStringExtra("email")
+        println(email)
         //INIT components
         pwdEdit = findViewById(R.id.pwdEdit)
         pwdLyt = findViewById(R.id.pwdLyt)
@@ -44,9 +45,11 @@ class resetpwdActivity : AppCompatActivity(){
         nextbtn = findViewById(R.id.btnNext)
         nextbtn.setOnClickListener{
             if(comparePasswords(pwdEdit.text.toString(), pwdcEdit.text.toString())){
-                APIService.userService.changePwd(userService.changePwdBody(
-                    email.toString(),pwdEdit.text.toString(),
-                    pwdcEdit.text.toString())).enqueue( object :
+
+                APIService.UserService.changePwd(userService.changePwdBody(
+                    pwdEdit.text.toString(),
+                   // email.toString()
+                 "aziza.taboubi@esprit.tn")).enqueue( object :
                     Callback<userService.UserResponse> {
                     override fun onResponse(
                         call: Call<userService.UserResponse>,

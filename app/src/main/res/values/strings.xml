@@ -10,6 +10,11 @@
         <font color="#00C9B8"><b>Login</b></font>
         if you already have an account
     </string>
+
+    <string name="updatedDate">Update 4/30/2023</string>
+    <string name="Arabic" translatable="false">العربية</string>
+    <string name="French" translatable="false">Français</string>
+    <string name="Eng" translatable="false">English</string>
     <string name="email">Exp: email@example.com</string>
     <string name="check_email">Check your email!</string>
     <string name="spin_model_title">Model</string>
@@ -20,8 +25,8 @@
     <string name="spin_name_title">Name</string>
     <string name="update_profile">Update Profile</string>
     <string name="username_profile">azizataboubii</string>
-    <string name="username">azizataboubii</string>
-    <string name="numTel">92448126</string>
+    <string name="username">username</string>
+    <string name="numTel">phone number</string>
     <string name="your_products">Your Products</string>
     <string name="spin_gouver_title">Gouvernorat</string>
     <string name="next">Next</string>
@@ -30,4 +35,15 @@
     <string name="confirm">Confirm</string>
     <string name="forgetPwd_message">Forgot your password?  Enter your email and will send you a verification code in order to restore your account.</string>
     <string name="otp">An email has been sent. Please enter the four- digit code that you received in order to change your password.</string>
+    <string name="logOut">Logout</string>
+    <string name="TermsAndCondition">Terms and Conditions</string>
+    <string name="languages">Languages</string>
+    <string name="darkMode">Dark Mode</string>
+    <string name="general">General</string>
+    <string name="TC_1">Welcome to Savy, an app that allows its users to search for different types of electronics and find the places with the best prices (lowest or best sellers) by comparing them. It also includes a sales area so that users can put their electronic devices up for sale. In order to use the app, you will need to create an account. By creating an account and using the app, you agree to be bound by these terms and conditions.</string>
+    <string name="TC_2"><b>Data Collection </b>Savy collects personal information from you in order to provide you with the best possible experience. This includes information such as your name, email address, and phone number in order to make the process easier, as well as any other information you choose to provide. Savy does not display any advertising to you. </string>
+    <string name="TC_3"><b>Device Access</b>\n Savy requires access to your device s camera in order to function properly. By using the app, you grant Savy permission to access your device s camera.</string>
+    <string name="TC_4"><b>Third-Party Integrations</b>\n Savy uses a Node.js server to store and process data. By using the app, you agree to the collection, use, and sharing of your data as described in these terms and conditions.</string>
+    <string name="TC_5"><b>Changes to These Terms</b>\n Savy reserves the right to update these terms and conditions at any time. If we make any changes, we will post the revised terms and conditions on this page and will indicate the effective date of the revised terms and conditions. We encourage you to review these terms and conditions periodically to stay informed about our practices. </string>
+    <string name="TC_6"><b>Contact Us</b>If you have any questions about these terms and conditions, please contact us at savysy22@gmail.com</string>
 </resources>

@@ -4,6 +4,8 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -28,39 +30,58 @@
         <activity
             android:name=".view.splash2Activity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"
-            android:exported="true">
+         >
 
         </activity>
 
         <activity
             android:name=".MainActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"
-            android:exported="true">
+            >
+
+        </activity>
+        <activity
+            android:name=".view.LoginActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            >
 
         </activity>
         <activity
             android:name=".view.forgotpasswordActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"
-            android:exported="true">
+            >
 
         </activity>
         <activity
             android:name=".view.otpActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"
-            android:exported="true">
+            >
 
         </activity>
         <activity
             android:name=".view.resetpwdActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"
-            android:exported="true">
+           >
+
+        </activity>
+        <activity
+            android:name=".view.update_profile"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            >
 
         </activity>
 
         <activity
             android:name=".view.navigationActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"
-            android:exported="true">
+           >
+
+        </activity>
+
+        <activity
+            android:name=".view.signupActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+           >
 
         </activity>
     </application>

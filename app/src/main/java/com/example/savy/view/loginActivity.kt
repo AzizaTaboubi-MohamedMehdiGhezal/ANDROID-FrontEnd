@@ -14,6 +14,7 @@ import android.widget.Button
 import android.widget.CheckBox
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.os.bundleOf
 import com.example.savy.MainActivity
 import com.example.savy.R
 import com.example.savy.services.APIService
@@ -59,6 +60,11 @@ class LoginActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        btnJustBrowsing.setOnClickListener{
+            var intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
+
         fgtpwdBtn.setOnClickListener{
             var intent = Intent(this, forgotpasswordActivity::class.java)
             startActivity(intent)
@@ -66,7 +72,8 @@ class LoginActivity : AppCompatActivity() {
 
 
         btnLogin.setOnClickListener{
-            APIService.userService.signIn(
+            bundleOf().clear()
+            APIService.UserService.signIn(
                 userService.LoginBody(
                     txtLogin.text.toString(),
                     txtPassword.text.toString()

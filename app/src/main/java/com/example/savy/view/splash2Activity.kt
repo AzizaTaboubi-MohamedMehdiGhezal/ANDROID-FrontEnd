@@ -14,7 +14,7 @@ class splash2Activity : AppCompatActivity() {
         setContentView(R.layout.splash2)
 
         Handler(Looper.getMainLooper()).postDelayed({
-            val mainIntent = Intent(this, MainActivity::class.java)
+            val mainIntent = Intent(this, LoginActivity::class.java)
             startActivity(mainIntent)
             finish()
         }, 7000)

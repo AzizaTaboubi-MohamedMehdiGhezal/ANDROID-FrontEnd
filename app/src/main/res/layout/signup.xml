@@ -52,14 +52,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtLayoutName"
-        app:startIconDrawable="@drawable/ic_lock"
+        app:startIconDrawable="@drawable/phone_call"
         app:startIconTint="@color/green_main">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/txtTelNum"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:inputType="textPassword" />
+            android:inputType="text" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -80,7 +80,7 @@
             android:id="@+id/txtMailAddress"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:inputType="textPassword" />
+            android:inputType="text" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
