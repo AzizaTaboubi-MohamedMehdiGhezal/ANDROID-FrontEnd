@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/logoPic"
+        android:layout_width="345dp"
+        android:layout_height="164dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        app:srcCompat="@drawable/savy_logo" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txtLayoutLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/logoPic"
+        android:layout_margin="20dp"
+        app:errorEnabled="true"
+        app:startIconDrawable="@drawable/ic_account"
+        app:startIconTint="@color/green_main">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txtLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Login"
+            android:inputType="text" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txtLayoutPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtLayoutLogin"
+        android:layout_margin="20dp"
+        android:hint="Password"
+        app:errorEnabled="true"
+        app:startIconDrawable="@drawable/ic_lock"
+        app:startIconTint="@color/green_main">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txtPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <CheckBox
+        android:id="@+id/cbRememberMe"
+        android:layout_width="356dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:text="Remember Me"
+        android:textColor="@color/colorPrimary"
+        android:layout_below="@+id/txtLayoutPassword"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="264dp"
+        android:layout_height="43dp"
+        android:layout_below="@+id/txtLayoutPassword"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="76dp"
+        android:background="@drawable/rounded_button"
+        android:text="Login"
+        android:textColor="@color/green_main" />
+
+    <TextView
+        android:id="@+id/txtLayoutForgotPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cbRememberMe"
+        android:layout_gravity="center"
+        android:layout_marginTop="70dp"
+        android:padding="8dp"
+        android:text="Don't have an account yet ?"
+        android:textColor="@color/colorPrimary"
+        android:textSize="18sp" />
+
+    <com.google.android.gms.common.SignInButton
+        android:id="@+id/sign_in_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtLayoutForgotPassword"
+        android:layout_marginTop="33dp" />
+
+    <Button
+        android:id="@+id/btnJustBrowsing"
+        style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
+        android:layout_width="176dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="60dp"
+        android:text="JUST BROWSING"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/black"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/btnSignup" />
+
+    <com.google.android.material.progressindicator.CircularProgressIndicator
+        android:id="@+id/progBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:indeterminate="true"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true" />
+
+    <Button
+        android:id="@+id/btnSignup"
+        style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
+        android:layout_width="98dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="53dp"
+        android:layout_marginRight="30dp"
+        android:text="Sign Up"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textColor="@color/black" />
+
+    <Button
+        android:id="@+id/fgtpwdBtn"
+        style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
+        android:layout_width="177dp"
+        android:layout_height="35dp"
+        android:layout_marginBottom="16dp"
+        android:text="forgot password?"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textColor="@color/black"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/btnJustBrowsing" />
+
+
+
+</RelativeLayout>
