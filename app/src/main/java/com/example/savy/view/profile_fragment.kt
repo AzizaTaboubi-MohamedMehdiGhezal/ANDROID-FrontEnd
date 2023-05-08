@@ -43,7 +43,6 @@ class profile_fragment : Fragment(){
     private lateinit var name_txt: TextView
     private lateinit var updateBtn: Button
     private lateinit var productsBtn: Button
-    private lateinit var settingsBtn: Button
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View?{
 
         val view = inflater.inflate(R.layout.profile_fragment, container, false)
@@ -83,11 +82,7 @@ class profile_fragment : Fragment(){
             startActivity(intent)
             requireActivity().finish()
         }
-            settingsBtn.setOnClickListener{
-                val intent = Intent(context, products::class.java)
-                startActivity(intent)
-                requireActivity().finish()
-            }
+
        }
 
     return view

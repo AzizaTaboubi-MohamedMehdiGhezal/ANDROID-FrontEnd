@@ -8,7 +8,7 @@
     tools:context=".MainActivity">
 
     <ImageView
-        android:id="@+id/logoPic"
+        android:id="@+id/productpic"
         android:layout_width="405dp"
         android:layout_height="108dp"
         android:layout_marginTop="5dp"
@@ -29,7 +29,7 @@
         app:errorTextColor="@color/txtFieldError"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logoPic"
+        app:layout_constraintTop_toBottomOf="@+id/productpic"
         app:startIconDrawable="@drawable/ic_account"
         app:startIconTint="@color/green_main">
 
@@ -43,7 +43,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/txtLayoutTelNum"
+        android:id="@+id/txtLayoutPrice"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
@@ -56,7 +56,7 @@
         app:startIconTint="@color/green_main">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/txtTelNum"
+            android:id="@+id/txtPrice"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:inputType="text" />
@@ -64,7 +64,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/txtLayoutMailAddress"
+        android:id="@+id/txtLayoutDiscount"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
@@ -72,12 +72,12 @@
         app:errorEnabled="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtLayoutTelNum"
+        app:layout_constraintTop_toBottomOf="@+id/txtLayoutPrice"
         app:startIconDrawable="@drawable/ic_email"
         app:startIconTint="@color/green_main">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/txtMailAddress"
+            android:id="@+id/txtDiscount"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:inputType="text" />
@@ -85,7 +85,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/txtLayoutPassword"
+        android:id="@+id/txtLayoutYear"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
@@ -93,12 +93,12 @@
         app:errorEnabled="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtLayoutMailAddress"
+        app:layout_constraintTop_toBottomOf="@+id/txtLayoutDiscount"
         app:startIconDrawable="@drawable/ic_lock"
         app:startIconTint="@color/green_main">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/txtPassword"
+            android:id="@+id/txtYear"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:inputType="textPassword" />
@@ -106,7 +106,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/txtLayoutConfirmPassword"
+        android:id="@+id/txtLayoutDescription"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
@@ -114,12 +114,12 @@
         app:errorEnabled="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtLayoutPassword"
+        app:layout_constraintTop_toBottomOf="@+id/txtLayoutYear"
         app:startIconDrawable="@drawable/ic_lock"
         app:startIconTint="@color/green_main">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/txtConfirmPassword"
+            android:id="@+id/txtDescription"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:inputType="textPassword" />
@@ -127,7 +127,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:id="@+id/btnSignup"
+        android:id="@+id/btnAdd"
         android:layout_width="363dp"
         android:layout_height="48dp"
         android:layout_margin="20dp"
@@ -139,7 +139,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtLayoutConfirmPassword" />
+        app:layout_constraintTop_toBottomOf="@+id/txtLayoutDescription" />
 
     <com.google.android.material.progressindicator.CircularProgressIndicator
         android:id="@+id/progBar"

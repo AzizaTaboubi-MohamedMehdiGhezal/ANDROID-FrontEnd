@@ -3,33 +3,19 @@ package com.example.savy.view
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import android.widget.FrameLayout
 import android.widget.ImageSwitcher
 import android.widget.ImageView
-import androidx.fragment.app.Fragment
+import androidx.appcompat.app.AppCompatActivity
 import com.example.savy.R
 
-class home_fragment : Fragment(){
-
-
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.home_fragment, container, false)
-    }
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        //
-        val imageSwitcher = view.findViewById<ImageSwitcher>(R.id.imgSwitcher)
-        val context = requireContext()
+class usedAllActivity: AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.used_all)
+        val imageSwitcher = findViewById<ImageSwitcher>(R.id.imgSwitcher)
         imageSwitcher.setFactory {
-            val newSwitcher = ImageView(context)
+            val newSwitcher = ImageView(this@usedAllActivity)
             newSwitcher.scaleType = ImageView.ScaleType.CENTER_CROP
             newSwitcher.layoutParams = FrameLayout.LayoutParams(
                 FrameLayout.LayoutParams.MATCH_PARENT,
@@ -43,7 +29,7 @@ class home_fragment : Fragment(){
             R.drawable.access,
             R.drawable.phone_1,
 
-        )
+            )
 
         var currentIndex = 0
 

@@ -14,6 +14,7 @@ import androidx.core.content.ContextCompat
 import androidx.lifecycle.ViewModelProvider
 import com.example.savy.model.LoginRequest
 import com.example.savy.model.LoginResponse
+import com.example.savy.utils.SessionManager
 import com.example.savy.view.*
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import retrofit2.Call
@@ -21,6 +22,7 @@ import retrofit2.Callback
 import retrofit2.Response
 
 class MainActivity : AppCompatActivity() {
+    private lateinit var sessionManager: SessionManager
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         supportActionBar?.hide()

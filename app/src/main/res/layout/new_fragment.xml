@@ -13,15 +13,16 @@
         android:layout_marginTop="70dp">
 
         <TextView
-            android:id="@+id/newTxt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:id="@+id/usedTxt"
+            android:layout_width="49dp"
+            android:layout_height="22dp"
+            android:layout_marginTop="4dp"
             android:text="NEW"
-            android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
             android:textColor="@color/black"
+            android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.482"
+            app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -32,18 +33,18 @@
             android:layout_marginTop="16dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/newTxt" />
+            app:layout_constraintTop_toBottomOf="@+id/usedTxt" />
 
         <ImageButton
             android:id="@+id/tvImageBtn"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:layout_marginStart="50dp"
+            android:layout_marginStart="45dp"
             android:layout_marginTop="50dp"
             android:src="@drawable/tv"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/newTxt"
+            app:layout_constraintTop_toBottomOf="@+id/usedTxt"
             app:layout_constraintVertical_bias="0.0" />
 
         <ImageButton
@@ -55,7 +56,7 @@
             android:src="@drawable/laptop"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@+id/tvImageBtn"
-            app:layout_constraintTop_toBottomOf="@+id/newTxt"
+            app:layout_constraintTop_toBottomOf="@+id/usedTxt"
             app:layout_constraintVertical_bias="0.0" />
 
         <ImageButton
@@ -66,7 +67,7 @@
             android:layout_marginTop="50dp"
             android:src="@drawable/desktop"
             app:layout_constraintStart_toEndOf="@+id/LaptopImageBtn"
-            app:layout_constraintTop_toBottomOf="@+id/newTxt" />
+            app:layout_constraintTop_toBottomOf="@+id/usedTxt" />
 
         <TextView
             android:id="@+id/tvTxt"
@@ -105,7 +106,7 @@
             android:id="@+id/phoneImageBtn"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:layout_marginStart="50dp"
+            android:layout_marginStart="45dp"
             android:layout_marginTop="11dp"
             android:src="@drawable/phone"
             app:layout_constraintStart_toStartOf="parent"
@@ -168,7 +169,7 @@
             android:id="@+id/consoleImageBtn"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:layout_marginStart="50dp"
+            android:layout_marginStart="45dp"
             android:layout_marginTop="6dp"
             android:src="@drawable/console"
             app:layout_constraintStart_toStartOf="parent"
@@ -231,7 +232,7 @@
             android:id="@+id/keyboardImageBtn"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:layout_marginStart="50dp"
+            android:layout_marginStart="45dp"
             android:layout_marginTop="5dp"
             android:src="@drawable/keyborad"
             app:layout_constraintStart_toStartOf="parent"

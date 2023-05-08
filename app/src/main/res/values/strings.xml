@@ -46,4 +46,82 @@
     <string name="TC_4"><b>Third-Party Integrations</b>\n Savy uses a Node.js server to store and process data. By using the app, you agree to the collection, use, and sharing of your data as described in these terms and conditions.</string>
     <string name="TC_5"><b>Changes to These Terms</b>\n Savy reserves the right to update these terms and conditions at any time. If we make any changes, we will post the revised terms and conditions on this page and will indicate the effective date of the revised terms and conditions. We encourage you to review these terms and conditions periodically to stay informed about our practices. </string>
     <string name="TC_6"><b>Contact Us</b>If you have any questions about these terms and conditions, please contact us at savysy22@gmail.com</string>
+    <string name="productname">productidk</string>
+    <string name="price">priceidk</string>
+    <string name="yourpdt">Your Products</string>
+    <string name="version">Version</string>
+    <string name="versionNum">1.0.1</string>
+    <string-array name="models">
+        <item> tablette</item>
+        <item> camera</item>
+        <item> console</item>
+        <item> desktop</item>
+        <item> mouse</item>
+        <item> laptop</item>
+        <item> mobile</item>
+        <item> keyboard</item>
+        <item> smartwatch</item>
+        <item> tv</item>
+        <item> fridge</item>
+    </string-array>
+    <string-array name="states">
+        <item> Nouveau</item>
+        <item> Occasion</item>
+        <item> Etat neuf</item>
+        <item> Jamais servi</item>
+    </string-array>
+
+    <string-array name="brands">
+        <item> Samsung</item>
+        <item> Apple</item>
+        <item> LG</item>
+        <item> Asus</item>
+        <item> MSI</item>
+        <item> Shark</item>
+        <item> Huawei</item>
+        <item> Xioami</item>
+        <item> Toshiba</item>
+        <item> Dell</item>
+        <item> NewStar</item>
+    </string-array>
+    <string-array name="names">
+        <item> Iphone 14</item>
+        <item> Samsung S22</item>
+        <item> Asus Vivobook</item>
+        <item> Macbook air</item>
+        <item> Macbook Pro</item>
+        <item> Iphone 14 Pro</item>
+        <item> Iphone 13</item>
+        <item> Xioami Redmi</item>
+        <item> Iphone 8 plus</item>
+        <item> Iphone XS</item>
+        <item> other</item>
+    </string-array>
+
+    <string-array name="gouver">
+        <item> Ariana</item>
+        <item> Beja</item>
+        <item> Ben Arous</item>
+        <item> Bizerte</item>
+        <item> Gabes</item>
+        <item> Gafsa</item>
+        <item> Jendouba</item>
+        <item> Kairouan</item>
+        <item> Kasserine</item>
+        <item> Kebili</item>
+        <item> Kef</item>
+        <item> Mahdia</item>
+        <item> Manouba</item>
+        <item> Medenine</item>
+        <item> Monastir</item>
+        <item> Nabeul</item>
+        <item> Sfax</item>
+        <item> Sidi Bouzid</item>
+        <item> Siliana</item>
+        <item> Sousse</item>
+        <item> Tataouine</item>
+        <item> Tozeur</item>
+        <item> Tunis</item>
+        <item> Zaghouan</item>
+    </string-array>
 </resources>

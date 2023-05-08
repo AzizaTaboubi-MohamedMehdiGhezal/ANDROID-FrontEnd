@@ -25,4 +25,5 @@ object APIService {
     val ProductService: produitService by lazy {
         retrofit().create(produitService::class.java)
     }
+
 }
