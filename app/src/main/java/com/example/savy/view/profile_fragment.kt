@@ -45,6 +45,8 @@ class profile_fragment : Fragment(){
     private lateinit var productsBtn: Button
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View?{
 
+
+
         val view = inflater.inflate(R.layout.profile_fragment, container, false)
                 //INIT
                 profileImg = view.findViewById(R.id.profileImg)

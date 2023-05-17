@@ -81,7 +81,7 @@ class products : AppCompatActivity() {
             addBtn.setOnClickListener {
                 val intent = Intent(this@products, add_productActivity::class.java)
                 startActivity(intent)
-                    finish()
+                finish()
             }
             /*editBtn.setOnClickListener {
                 val intent = Intent(this@products, updateused_products::class.java)

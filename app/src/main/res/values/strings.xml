@@ -63,6 +63,7 @@
         <item> smartwatch</item>
         <item> tv</item>
         <item> fridge</item>
+        <item> other</item>
     </string-array>
     <string-array name="states">
         <item> Nouveau</item>
@@ -83,6 +84,7 @@
         <item> Toshiba</item>
         <item> Dell</item>
         <item> NewStar</item>
+        <item> Other</item>
     </string-array>
     <string-array name="names">
         <item> Iphone 14</item>

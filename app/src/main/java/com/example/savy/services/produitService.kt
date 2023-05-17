@@ -21,7 +21,6 @@ interface produitService {
         val promo: Int,
         val etat: String,
         val marque: String,
-        val boutique: String,
         val annee: Int,
         val description: String,
         val type: String,
@@ -34,7 +33,6 @@ interface produitService {
         val promo: Int,
         val etat: String,
         val marque: String,
-        val boutique: String,
         val annee: Int,
         val description: String,
         val type: String,
@@ -44,6 +42,7 @@ interface produitService {
 data class getByID(
     val userID: String
 )
+    //
     @POST("/produit/getByUserID")
     fun getAll(@Body userID: getByID): Call<ProduitResponse>
     @GET("/produit/searchUserProd")
@@ -53,7 +52,8 @@ data class getByID(
     @POST("/produit/addNewProduct")
     fun addProduct(@Body newProd: addProduct): Call<ProductResponse>
     @POST("/produit/update_prod")
-    fun update(): Call<updateProduct>
+    fun update(updateProduct: updateProduct): Call<updateProduct>
+    //change method Delete
     @POST("/produit/delete_prod")
     fun delete()
 
