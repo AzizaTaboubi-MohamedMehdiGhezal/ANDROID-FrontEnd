@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_frg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.home_fragment">
+
+    <ScrollView
+        android:layout_marginTop="60dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintEnd_toEndOf="@+id/whatsnewTxt"
+            app:layout_constraintStart_toEndOf="@+id/whatsnewTxt">
+
+
+            <ImageSwitcher
+                android:id="@+id/imageSwitcher2"
+                android:layout_width="339dp"
+                android:layout_height="120dp"
+                app:layout_constraintBottom_toTopOf="@+id/promotionsTxt"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/whatsnewTxt"
+                app:layout_constraintVertical_bias="0.366">
+
+            </ImageSwitcher>
+
+            <TextView
+                android:id="@+id/whatsnewTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="116dp"
+                android:text="@string/homepub"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textColor="@color/green_main"
+                android:textSize="34sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.068"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/newTxt">
+
+            </TextView>
+
+            <ImageSwitcher
+                android:id="@+id/imageSwitcher3"
+                android:layout_width="347dp"
+                android:layout_height="114dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.515"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/promotionsTxt">
+
+            </ImageSwitcher>
+
+            <TextView
+                android:id="@+id/promotionsTxt"
+                android:layout_width="198dp"
+                android:layout_height="0dp"
+                android:layout_marginBottom="2593dp"
+                android:text="@string/promotions"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textColor="@color/green_main"
+                android:textSize="34sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.075"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/materialDivider3"
+                tools:ignore="MissingConstraints">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/newTxt"
+                android:layout_width="131dp"
+                android:layout_height="57dp"
+                android:layout_marginTop="24dp"
+                android:text="HOME"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/materialDivider3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="117dp"
+                android:layout_marginBottom="277dp"
+                app:layout_constraintBottom_toTopOf="@+id/promotionsTxt"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/announcementsTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                android:text="ALL ANNOUNCEMENTS"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textSize="28dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.146"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageSwitcher3" />
+
+            <GridView
+                android:id="@+id/gridViewproduct"
+                android:layout_width="350dp"
+                android:layout_height="2396dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="36dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/announcementsTxt" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</FrameLayout>
