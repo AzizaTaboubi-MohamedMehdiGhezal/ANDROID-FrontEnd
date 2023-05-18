@@ -42,15 +42,15 @@ class signupActivity : AppCompatActivity(){
         setFullScreen(context)
         txtName = findViewById(R.id.txtName)
         txtLayoutName = findViewById(R.id.txtLayoutName)
-        txtTelNum = findViewById(R.id.txtTelNum)
-        txtLayoutTelNum = findViewById(R.id.txtLayoutTelNum)
-        txtMailAddress = findViewById(R.id.txtMailAddress)
-        txtLayoutMailAddress = findViewById(R.id.txtLayoutMailAddress)
-        txtPassword = findViewById(R.id.txtPassword)
-        txtLayoutPassword = findViewById(R.id.txtLayoutPassword)
-        txtConfirmPassword = findViewById(R.id.txtConfirmPassword)
-        txtLayoutConfirmPassword = findViewById(R.id.txtLayoutConfirmPassword)
-        btnSignup = findViewById(R.id.btnSignup)
+        txtTelNum = findViewById(R.id.txtPrice)
+        txtLayoutTelNum = findViewById(R.id.txtLayoutPrice)
+        txtMailAddress = findViewById(R.id.txtDiscount)
+        txtLayoutMailAddress = findViewById(R.id.txtLayoutDiscount)
+        txtPassword = findViewById(R.id.txtYear)
+        txtLayoutPassword = findViewById(R.id.txtLayoutYear)
+        txtConfirmPassword = findViewById(R.id.txtDescription)
+        txtLayoutConfirmPassword = findViewById(R.id.txtLayoutDescription)
+        btnSignup = findViewById(R.id.btnAdd)
 
 
         btnSignup!!.setOnClickListener {
@@ -62,7 +62,7 @@ class signupActivity : AppCompatActivity(){
                     txtTelNum.text.toString(),
 
 
-                )
+                    )
             ).enqueue(
                 object : Callback<userService.UserResponse> {
                     override fun onResponse(

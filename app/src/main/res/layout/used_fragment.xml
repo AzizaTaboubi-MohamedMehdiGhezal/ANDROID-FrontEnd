@@ -18,12 +18,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="145dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="4dp"
             android:text="USED"
-            android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textColor="@color/black"
+            android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.032"
+            app:layout_constraintHorizontal_bias="0.162"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -31,7 +32,7 @@
             android:id="@+id/materialDivider2"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="22dp"
+            android:layout_marginTop="20dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView2" />
@@ -43,6 +44,8 @@
             android:layout_marginStart="40dp"
             android:layout_marginTop="100dp"
             android:prompt="@string/spin_model_title"
+            android:background="@drawable/bordered_background"
+            android:entries="@array/models"
             app:layout_constraintEnd_toStartOf="@+id/brandspin"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
@@ -55,6 +58,8 @@
             android:layout_marginStart="40dp"
             android:layout_marginTop="184dp"
             android:prompt="@string/spin_name_title"
+            android:background="@drawable/bordered_background"
+            android:entries="@array/names"
             app:layout_constraintEnd_toStartOf="@+id/gouverspin"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
@@ -66,6 +71,8 @@
             android:layout_height="53dp"
             android:layout_marginTop="184dp"
             android:prompt="@string/spin_gouver_title"
+            android:background="@drawable/bordered_background"
+            android:entries="@array/gouver"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.869"
             app:layout_constraintStart_toStartOf="parent"
@@ -73,10 +80,12 @@
 
         <Spinner
             android:id="@+id/brandspin"
-            android:layout_width="158dp"
-            android:layout_height="53dp"
+            android:layout_width="155dp"
+            android:layout_height="51dp"
             android:layout_marginTop="100dp"
             android:prompt="@string/spin_brand_title"
+            android:background="@drawable/bordered_background"
+            android:entries="@array/brands"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.869"
             app:layout_constraintStart_toStartOf="parent"
@@ -127,6 +136,70 @@
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/seekBarPrice" />
+
+        <TextView
+            android:id="@+id/modelTxt"
+            android:layout_width="85dp"
+            android:layout_height="18dp"
+            android:layout_marginStart="68dp"
+            android:layout_marginEnd="72dp"
+            android:layout_marginBottom="8dp"
+            android:text="Pick a Model"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            app:layout_constraintBottom_toTopOf="@+id/modelspin"
+            app:layout_constraintEnd_toStartOf="@+id/brandspin"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/brandTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="64dp"
+            android:layout_marginBottom="5dp"
+            android:text="Pick a Brand"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            app:layout_constraintBottom_toTopOf="@+id/brandspin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.896"
+            app:layout_constraintStart_toEndOf="@+id/modelTxt" />
+
+        <TextView
+            android:id="@+id/nameTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:text="Product Name"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            app:layout_constraintBottom_toTopOf="@+id/namespin"
+            app:layout_constraintEnd_toStartOf="@+id/gouverspin"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/gouverTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="105dp"
+            android:layout_marginBottom="5dp"
+            android:text="Gouvernorat"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            app:layout_constraintBottom_toTopOf="@+id/gouverspin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/nameTxt" />
+
+        <Button
+            android:id="@+id/browseAll"
+            style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
+            android:layout_width="265dp"
+            android:layout_height="53dp"
+            android:layout_marginTop="52dp"
+            android:text="Browse Everything"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/searchBtn" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>

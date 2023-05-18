@@ -93,26 +93,26 @@ class update_profile: AppCompatActivity() {
                     )
                 ).enqueue(
                     object : Callback<userService.UserResponse> {
-                    override fun onResponse(
-                        call: Call<userService.UserResponse>,
-                        response: Response<userService.UserResponse>
-                    ) {
-                        if (response.code() == 200) {
-                            Toast.makeText(context, "Profile Updated ✅", Toast.LENGTH_SHORT).show()
-                        } else if (response.code() == 400) {
-                            println("status code is " + response.message())
-                            showDialog(context, "Error ❌")
-                        } else {
-                            println("status code is " + response.code())
-                            startActivity(Intent(context, profile_fragment::class.java))
-                            finish()
+                        override fun onResponse(
+                            call: Call<userService.UserResponse>,
+                            response: Response<userService.UserResponse>
+                        ) {
+                            if (response.code() == 200) {
+                                Toast.makeText(context, "Profile Updated ✅", Toast.LENGTH_SHORT).show()
+                            } else if (response.code() == 400) {
+                                println("status code is " + response.message())
+                                showDialog(context, "Error ❌")
+                            } else {
+                                println("status code is " + response.code())
+                                startActivity(Intent(context, profile_fragment::class.java))
+                                finish()
+                            }
                         }
-                    }
-                    override fun onFailure(call: Call<userService.UserResponse>, t: Throwable) {
-                        println("HTTP ERROR")
-                        t.printStackTrace()
-                    }
-                })
+                        override fun onFailure(call: Call<userService.UserResponse>, t: Throwable) {
+                            println("HTTP ERROR")
+                            t.printStackTrace()
+                        }
+                    })
             }
 
         }

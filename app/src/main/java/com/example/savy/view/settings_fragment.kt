@@ -15,25 +15,27 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.LinearLayout
+import androidx.annotation.MenuRes
 import androidx.appcompat.view.menu.MenuBuilder
 import androidx.appcompat.widget.PopupMenu
 import androidx.core.content.ContextCompat
 import androidx.core.view.GravityCompat
 import androidx.fragment.app.Fragment
 import com.example.savy.R
+import com.example.savy.utils.SessionManager
 import com.google.android.material.switchmaterial.SwitchMaterial
 import java.util.*
 
 
 class settings_fragment : Fragment() {
+    private lateinit var sessionManager: SessionManager
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
         var view = inflater.inflate(R.layout.settings, container, false)
-
-    /*    val darkModeSwitch = view.findViewById<SwitchMaterial>(R.id.darkModeSwitch)
+        val darkModeSwitch = view.findViewById<SwitchMaterial>(R.id.darkModeSwitch)
         darkModeSwitch.setOnCheckedChangeListener { buttonView, isChecked ->
             val backgroundColor = if (isChecked) {
                 R.color.dark_background_color
@@ -60,16 +62,16 @@ class settings_fragment : Fragment() {
         }
 
         //Terms and conditions Section
-       *//* val expandButtonTermsAndCondition = view.findViewById<Button>(R.id.expandButtonTermsAndCondition)
+        val expandButtonTermsAndCondition = view.findViewById<Button>(R.id.expandButtonTermsAndCondition)
         expandButtonTermsAndCondition.setOnClickListener {
-            val backFragment = TermsAndConditionFragment()
+            val backFragment = termsAnsconditions()
             requireActivity().supportFragmentManager.beginTransaction()
                 .setCustomAnimations(R.anim.slide_in_up, R.anim.slide_out_up, R.anim.slide_in_down, R.anim.slide_out_down)
                 .replace(R.id.fragmentContainerView, backFragment)
                 .addToBackStack(null)
                 .commit()
-        }*//*
-*//*
+        }
+
         //logout
         val logoutBtn = view.findViewById<Button>(R.id.logout)
         logoutBtn.setOnClickListener {
@@ -112,7 +114,7 @@ class settings_fragment : Fragment() {
                     }
                 }
             }
-        }*//*
+        }
         val gravity = Gravity.END
         popup.gravity = GravityCompat.getAbsoluteGravity(gravity, resources.configuration.layoutDirection)
         popup.setOnMenuItemClickListener { menuItem ->
@@ -158,8 +160,6 @@ class settings_fragment : Fragment() {
         popup.show()
     }
 
-*/
-return view
 
-        }
+
 }

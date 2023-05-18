@@ -9,13 +9,40 @@
 
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycleView"
-        android:layout_width="335dp"
-        android:layout_height="668dp"
+        android:id="@+id/produitRV"
+        android:layout_width="347dp"
+        android:layout_height="552dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="35dp"
+        android:layout_marginTop="132dp"
         android:layout_marginEnd="25dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.571"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/prdTxt"
+        android:layout_width="153dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="52dp"
+        android:text="@string/yourpdt"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.112"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/addBtn"
+        android:layout_width="85dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginBottom="36dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/produitRV"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.513"
+        app:layout_constraintStart_toEndOf="@+id/prdTxt"
+        app:srcCompat="@drawable/add" />
 </androidx.constraintlayout.widget.ConstraintLayout>

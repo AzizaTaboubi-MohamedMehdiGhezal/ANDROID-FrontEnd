@@ -35,10 +35,10 @@ class forgotpasswordActivity : AppCompatActivity(){
                         response: Response<userService.UserResponse>
                     ) {
                         if (response.code() == 200) {
-                           val intent = Intent(this@forgotpasswordActivity,otpActivity::class.java).apply {
-                               putExtra("email",  emailotpText.text.toString())
+                            val intent = Intent(this@forgotpasswordActivity,otpActivity::class.java).apply {
+                                putExtra("email",  emailotpText.text.toString())
 
-                           }
+                            }
                             println(emailotpText.text.toString())
                             startActivity(intent)
                             finish()
@@ -58,7 +58,7 @@ class forgotpasswordActivity : AppCompatActivity(){
 
                 }
             )
-           }
+        }
 
     }
     private fun showDialog(activityName: Context, message:String){

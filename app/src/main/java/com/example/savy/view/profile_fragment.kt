@@ -43,15 +43,16 @@ class profile_fragment : Fragment(){
     private lateinit var name_txt: TextView
     private lateinit var updateBtn: Button
     private lateinit var productsBtn: Button
-    private lateinit var settingsBtn: Button
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View?{
 
+
+
         val view = inflater.inflate(R.layout.profile_fragment, container, false)
-                //INIT
-                profileImg = view.findViewById(R.id.profileImg)
-                name_txt = view.findViewById(R.id.name_txt)
-                updateBtn = view.findViewById(R.id.updateBtn)
-                productsBtn = view.findViewById(R.id.productsBtn)
+        //INIT
+        profileImg = view.findViewById(R.id.profileImg)
+        name_txt = view.findViewById(R.id.name_txt)
+        updateBtn = view.findViewById(R.id.updateBtn)
+        productsBtn = view.findViewById(R.id.productsBtn)
         //Var
         var FieldsState = false
         val context = requireContext()
@@ -60,7 +61,7 @@ class profile_fragment : Fragment(){
             context.getSharedPreferences(Constant.SHARED_PREF_SESSION, Context.MODE_PRIVATE)
         val userData = sharedPreferences.getString("USER_DATA", "")
         if (userData != null) {
-        val user = Gson().fromJson(userData, User::class.java)
+            val user = Gson().fromJson(userData, User::class.java)
             val picasso = Picasso.get()
             val requestOptions = RequestOptions()
                 .placeholder(R.drawable.savy_logo)
@@ -77,29 +78,25 @@ class profile_fragment : Fragment(){
                 val intent = Intent(context, update_profile::class.java)
                 startActivity(intent)
                 requireActivity().finish()
-        }
+            }
             productsBtn.setOnClickListener{
-            val intent = Intent(context, products::class.java)
-            startActivity(intent)
-            requireActivity().finish()
-        }
-            settingsBtn.setOnClickListener{
                 val intent = Intent(context, products::class.java)
                 startActivity(intent)
                 requireActivity().finish()
             }
-       }
 
-    return view
-}
-fun showDialog(activityName: Context, message:String){
-    val builder = AlertDialog.Builder(activityName)
-    builder.setTitle("Caution ⚠️")
-    builder.setMessage(message)
-    builder.setPositiveButton("OK", null)
-    val dialog = builder.create()
-    dialog.show()
-}
+        }
+
+        return view
+    }
+    fun showDialog(activityName: Context, message:String){
+        val builder = AlertDialog.Builder(activityName)
+        builder.setTitle("Caution ⚠️")
+        builder.setMessage(message)
+        builder.setPositiveButton("OK", null)
+        val dialog = builder.create()
+        dialog.show()
+    }
     private fun pickFromGallery() {
         val intent = Intent(Intent.ACTION_PICK)
         intent.type="image/*"

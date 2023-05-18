@@ -36,7 +36,7 @@ interface userService {
         val email: String,
         val fullname: String,
         val numTel: String
-        )
+    )
     @POST("/user/register")
     fun signUp(@Body userBody: UserBody): Call<UserResponse>
 
