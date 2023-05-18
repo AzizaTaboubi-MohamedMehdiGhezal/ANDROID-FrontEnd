@@ -1,7 +1,7 @@
 package com.example.savy.utils
 
-import com.example.savy.utils.Constants.OPEN_GOOGLE
-import com.example.savy.utils.Constants.OPEN_SEARCH
+import com.example.savy.utils.Constant.OPEN_GOOGLE
+import com.example.savy.utils.Constant.OPEN_SEARCH
 
 object BotResponse {
     fun basicResponses(_message: String): String {

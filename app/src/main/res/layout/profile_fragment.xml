@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.profile_fragment">
+    tools:context=".view.profile.ProfileFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -41,6 +41,7 @@
             android:layout_width="133dp"
             android:layout_height="56dp"
             android:layout_marginTop="56dp"
+            app:backgroundTint="@color/black"
             android:background="@drawable/rounded_button"
             android:text="@string/update_profile"
             android:textColor="@color/green_main"
@@ -52,6 +53,7 @@
         <Button
             android:id="@+id/productsBtn"
             android:layout_width="123dp"
+            app:backgroundTint="@color/black"
             android:layout_height="52dp"
             android:layout_marginTop="56dp"
             android:layout_marginEnd="60dp"

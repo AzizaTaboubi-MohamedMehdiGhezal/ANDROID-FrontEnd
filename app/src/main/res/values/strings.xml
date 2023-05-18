@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">savy</string>
-    <string name="login" ><br><b>Login</b> if you already have an account </br></string>
-    <string name="register" ><br><b>Register</b>  to get started with the app </br></string>
+    <string name="login"><br><b>Login</b> if you already have an account </br></string>
+    <string name="register"><br><b>Register</b>  to get started with the app </br></string>
 
     <string name="btn_register">REGISTER</string>
     <string name="btn_login">LOGIN</string>
@@ -86,21 +86,19 @@
         <item> NewStar</item>
         <item> Other</item>
     </string-array>
-    <string-array name="names">
-        <item> Iphone 14</item>
-        <item> Samsung S22</item>
-        <item> Asus Vivobook</item>
-        <item> Macbook air</item>
-        <item> Macbook Pro</item>
-        <item> Iphone 14 Pro</item>
-        <item> Iphone 13</item>
-        <item> Xioami Redmi</item>
-        <item> Iphone 8 plus</item>
-        <item> Iphone XS</item>
-        <item> other</item>
+    <string-array name="years">
+        <item>select</item>
+        <item>2022</item>
+        <item>2021</item>
+        <item>2020</item>
+        <item>2019</item>
+        <item>2018</item>
+        <item>2017</item>
+        <item>2016</item>
     </string-array>
 
     <string-array name="gouver">
+        <item> select</item>
         <item> Ariana</item>
         <item> Beja</item>
         <item> Ben Arous</item>
@@ -126,4 +124,12 @@
         <item> Tunis</item>
         <item> Zaghouan</item>
     </string-array>
+    <string name="title_activity_product_details">productDetails</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
 </resources>

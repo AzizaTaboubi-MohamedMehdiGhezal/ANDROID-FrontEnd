@@ -5,9 +5,12 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.example.savy.R
+import com.example.savy.view.product.FilterProductByTypeFragment
+import com.example.savy.view.product.UsedFragment
+import com.example.savy.view.profile.ProfileFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
-class navigationActivity : AppCompatActivity() {
+class NavigationActivity : AppCompatActivity() {
 
     lateinit var bottomNav : BottomNavigationView
 
@@ -16,26 +19,26 @@ class navigationActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         supportActionBar?.hide()
         setContentView(R.layout.home_fragment)
-        loadFragment(home_fragment())
+        loadFragment(HomeFragment())
 
         val bottomNav = findViewById<BottomNavigationView>(R.id.bott_nav)
 
         bottomNav.setOnItemSelectedListener {
             when (it.itemId) {
                 R.id.nav_home -> {
-                    loadFragment(home_fragment())
+                    loadFragment(HomeFragment())
                     true
                 }
                 R.id.nav_new -> {
-                    loadFragment(new_fragment())
+                    loadFragment(FilterProductByTypeFragment())
                     true
                 }
                 R.id.nav_used -> {
-                    loadFragment(used_fragment())
+                    loadFragment(UsedFragment())
                     true
                 }
                 R.id.nav_profile -> {
-                    loadFragment(profile_fragment())
+                    loadFragment(ProfileFragment())
                     true
                 }
 

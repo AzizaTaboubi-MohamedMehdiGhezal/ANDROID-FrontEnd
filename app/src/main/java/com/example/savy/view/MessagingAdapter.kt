@@ -9,14 +9,14 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.savy.R
 import com.example.savy.data.Message
-import com.example.savy.utils.Constants
-import kotlinx.android.synthetic.main.message_item.view.*
+import com.example.savy.databinding.MessageItemBinding
+import com.example.savy.utils.Constant
 
 class MessagingAdapter: RecyclerView.Adapter<MessagingAdapter.MessageViewHolder>() {
 
     var messagesList = mutableListOf<Message>()
 
-    inner class MessageViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    inner class MessageViewHolder(val binding: MessageItemBinding) : RecyclerView.ViewHolder(binding.root) {
         init {
             itemView.setOnClickListener {
 
@@ -29,7 +29,7 @@ class MessagingAdapter: RecyclerView.Adapter<MessagingAdapter.MessageViewHolder>
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MessageViewHolder {
         return MessageViewHolder(
-            LayoutInflater.from(parent.context).inflate(R.layout.message_item, parent, false)
+            MessageItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         )
     }
 
@@ -42,19 +42,19 @@ class MessagingAdapter: RecyclerView.Adapter<MessagingAdapter.MessageViewHolder>
         val currentMessage = messagesList[position]
 
         when (currentMessage.id) {
-            Constants.SEND_ID -> {
-                holder.itemView.tv_message.apply {
+            Constant.SEND_ID -> {
+                holder.binding.tvMessage.apply {
                     text = currentMessage.message
                     visibility = View.VISIBLE
                 }
-                holder.itemView.tv_bot_message.visibility = View.GONE
+                holder.binding.tvBotMessage.visibility = View.GONE
             }
-            Constants.RECEIVE_ID -> {
-                holder.itemView.tv_bot_message.apply {
+            Constant.RECEIVE_ID -> {
+                holder.binding.tvBotMessage.apply {
                     text = currentMessage.message
                     visibility = View.VISIBLE
                 }
-                holder.itemView.tv_message.visibility = View.GONE
+                holder.binding.tvMessage.visibility = View.GONE
             }
         }
     }

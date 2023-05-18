@@ -1,29 +1,28 @@
 package com.example.savy
 
 import android.app.Activity
-import android.content.Intent
 import android.graphics.drawable.ColorDrawable
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.provider.CalendarContract.Colors
 import android.view.WindowInsets
 import android.view.WindowInsetsController
 import android.view.WindowManager
-import android.widget.Button
 import androidx.core.content.ContextCompat
-import androidx.lifecycle.ViewModelProvider
-import com.example.savy.model.LoginRequest
-import com.example.savy.model.LoginResponse
 import com.example.savy.utils.SessionManager
 import com.example.savy.view.*
+import com.example.savy.view.product.FilterProductByTypeFragment
+import com.example.savy.view.product.UsedFragment
+import com.example.savy.view.profile.ProfileFragment
+import com.example.savy.view.profile.SettingsFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
 
 class MainActivity : AppCompatActivity() {
     private lateinit var sessionManager: SessionManager
     override fun onCreate(savedInstanceState: Bundle?) {
+        sessionManager = SessionManager(this)
+        sessionManager.isLoggedIn = true
         super.onCreate(savedInstanceState)
         supportActionBar?.hide()
         setFullScreen(this@MainActivity)
@@ -35,43 +34,46 @@ class MainActivity : AppCompatActivity() {
         val textColor = ContextCompat.getColorStateList(this, R.color.green_main)
         bottomNavigationView.setItemTextColor(textColor)
         bottomNavigationView.setBackground(ColorDrawable(bgColor))
+
+
         bottomNavigationView.setOnNavigationItemSelectedListener { menuItem ->
             when (menuItem.itemId) {
                 R.id.nav_home -> {
-                    val fragment = home_fragment()
+                    val fragment = HomeFragment()
                     supportFragmentManager.beginTransaction()
                         .replace(R.id.fragmentContainerView, fragment)
                         .commit()
                     true
                 }
                 R.id.nav_new -> {
-                    val fragment = new_fragment()
+                    val fragment = FilterProductByTypeFragment()
                     supportFragmentManager.beginTransaction()
                         .replace(R.id.fragmentContainerView, fragment)
                         .commit()
                     true
                 }
                 R.id.nav_used -> {
-                    val fragment = used_fragment()
+                    val fragment = UsedFragment()
                     supportFragmentManager.beginTransaction()
                         .replace(R.id.fragmentContainerView, fragment)
                         .commit()
                     true
                 }
                 R.id.nav_profile -> {
-                    val fragment = profile_fragment()
+                    val fragment = ProfileFragment()
                     supportFragmentManager.beginTransaction()
                         .replace(R.id.fragmentContainerView, fragment)
                         .commit()
                     true
                 }
                 R.id.nav_settings -> {
-                    val fragment = settings_fragment()
+                    val fragment = SettingsFragment()
                     supportFragmentManager.beginTransaction()
                         .replace(R.id.fragmentContainerView, fragment)
                         .commit()
                     true
                 }
+
                 else -> false
             }
         }
